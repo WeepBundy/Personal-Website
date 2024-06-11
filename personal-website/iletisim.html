@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <!-- Ekran boyutuna göre uygun ölçeklendirme sağlamak için viewport meta etiketi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sayfa simgesi olarak kullanılacak görüntü dosyasının bağlantısı -->
+    <link rel="icon" type="image/png" href="css/photo/logo.png" />
+    <!-- Sayfanın karakter setini UTF-8 olarak belirleme -->
+    <meta charset="UTF-8" />
+    <!-- İletişim sayfası için stil dosyasının bağlantısı -->
+    <link rel="stylesheet" href="css/iletisim-style.css" />
+    <!-- Bootstrap CSS kütüphanesinin CDN bağlantısı -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.ayroui.com/1.0/css/bootstrap.min.css"
+    />
+    <!-- Lineicons CSS kütüphanesinin CDN bağlantısı -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+    <!-- Ayro UI stil dosyasının CDN bağlantısı -->
+    <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/starter.css" />
+    <!-- Sayfanın kanonik URL'sini belirtir -->
+    <link rel="canonical" href="https://turkergoktas.com/iletisim.html" />
+  </head>
+  <body>
+    <!-- Başlık ve menü alanı -->
+    <header class="container">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <!-- Logo görüntü dosyasının bağlantısı -->
+            <img id="logo" src="css/photo/faviconwhite.png" alt="Lorem Ipsum" />
+          </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkinda.html">Hakkında</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+          <!-- Projeler sayfasına yönlendiren buton -->
+          <a href="projeler.html" class="project-button">Projeler</a>
+        </div>
+      </nav>
+    </header>
+    <!-- Başlık ve menü alanı sonu -->
+
+    <!-- İletişim formu alanı -->
+    <form action="https://formspree.io/f/xwkgvjpb" method="POST">
+      <section class="contact-area">
+        <div class="container">
+          <div class="row">
+            <!-- Sol sütun: İletişim formu -->
+            <div class="col-xl-7 col-lg-8">
+              <div class="section-title mt-45">
+                <h3 class="title">İletişim</h3>
+              </div>
+              <div class="contact-form form-style-four mt-15">
+                <!-- Form başlangıcı -->
+                <form action="#">
+                  <div class="row">
+                    <!-- İsim alanı -->
+                    <div class="col-md-6">
+                      <div class="form-input mt-15">
+                        <label>Tam İsim</label>
+                        <div class="input-items default">
+                          <i class="lni lni-user"></i>
+                          <input
+                            type="text"
+                            name="contact_author"
+                            placeholder="İsim Soyisim"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- E-posta alanı -->
+                    <div class="col-md-6">
+                      <div class="form-input mt-15">
+                        <label>Mail</label>
+                        <div class="input-items default">
+                          <i class="lni lni-envelope"></i>
+                          <input
+                            type="text"
+                            name="_replyto"
+                            placeholder="admin@gmail.com"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Telefon numarası alanı -->
+                    <div class="col-md-6">
+                      <div class="form-input mt-15">
+                        <label>Telefon Numaranız</label>
+                        <div class="input-items default">
+                          <i class="lni lni-phone"></i>
+                          <input
+                            type="tel"
+                            name="phone"
+                            placeholder="0555 123 4567"
+                            oninput="formatPhoneNumber(this)"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Konu alanı -->
+                    <div class="col-md-6">
+                      <div class="form-input mt-15">
+                        <label>Konu</label>
+                        <div class="input-items default">
+                          <i class="lni lni-bubble"></i>
+                          <input
+                            type="text"
+                            name="contact_subject"
+                            placeholder="Konu Yaz"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mesaj alanı -->
+                    <div class="col-md-12">
+                      <div class="form-input mt-15">
+                        <label>Mesajın</label>
+                        <div class="input-items default">
+                          <i class="lni lni-pencil-alt"></i>
+                          <textarea
+                            name="contact_content"
+                            placeholder="Mesajınızı buraya yazın"
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Gönder butonu -->
+                    <div class="col-md-12">
+                      <div class="single-form mt-15">
+                        <div class="input-form rounded-buttons">
+                          <button
+                            class="btn primary-btn rounded-full"
+                            type="submit"
+                          >
+                            GÖNDER
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Sağ sütun: İletişim bilgileri -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 offset-xl-1">
+              <div class="section-title mt-5">
+                <h3 class="title">İletişim Bilgileri</h3>
+              </div>
+              <div class="contact-info">
+                <ul class="info">
+                  <!-- Adres bilgisi -->
+                  <li>
+                    <div class="single-info">
+                      <div class="info-icon">
+                        <i class="lni lni-map-marker"></i>
+                      </div>
+                      <div class="info-content">
+                        <p class="text">Antalya / Alanya</p>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- E-posta bilgisi -->
+                  <li>
+                    <div class="single-info">
+                      <div class="info-icon">
+                        <i class="lni lni-envelope"></i>
+                      </div>
+                      <div class="info-content">
+                        <p class="text">example@gmail.com</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- Sosyal medya bağlantıları -->
+                <ul class="social mt-5">
+                  <li>
+                    <a href="https://www.facebook.com/">
+                      <i class="lni lni-facebook-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-twitter-original"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/">
+                      <i class="lni lni-instagram-original"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/">
+                      <i class="lni lni-linkedin-original"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+    <!-- İletişim formu alanı sonu -->
+
+    <!-- Telefon numarası formatlama fonksiyonu -->
+    <script>
+      function formatPhoneNumber(input) {
+        var phoneNumber = input.value.replace(/\D/g, "");
+        if (phoneNumber.length > 10) {
+          phoneNumber = phoneNumber.slice(0, 10);
+        }
+        phoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3");
+        input.value = phoneNumber;
+      }
+    </script>
+  </body>
+</html>
